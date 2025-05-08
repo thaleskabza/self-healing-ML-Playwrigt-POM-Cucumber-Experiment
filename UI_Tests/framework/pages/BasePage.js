@@ -1,5 +1,5 @@
 // UI_Tests/framework/pages/BasePage.js
-const LocatorService = require('../services/LocatorService');
+const LocatorService = require('../services/LocatorService');//UI_Tests/framework/services/LocatorService.js
 
 class BasePage {
   /**

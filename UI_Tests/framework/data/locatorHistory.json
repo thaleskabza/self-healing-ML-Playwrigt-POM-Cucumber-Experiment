@@ -30,6 +30,381 @@
         "selector": "button[ng-click=\"pop()\"]",
         "confidence": 0.9500000000000001,
         "timestamp": 1746708844117
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710565427
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710567301
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710569101
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746710833063
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710835664
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710835829
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710837780
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746710837972
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711149498
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711151369
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711151447
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711153417
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711153614
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711185255
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711187160
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711187244
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711189254
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746711189461
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746712718680
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712720607
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712722484
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712780939
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712782969
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712784867
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746712822097
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712824172
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712824315
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712826321
+      },
+      {
+        "selector": "button.btn-link.pull-right[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746712826519
+      }
+    ],
+    "headers": [
+      {
+        "selector": "thead tr.smart-table-header-row th span.header-content",
+        "confidence": 0.55,
+        "timestamp": 1746710833159
+      },
+      {
+        "selector": "thead tr.smart-table-header-row th span.header-content",
+        "confidence": 1,
+        "timestamp": 1746711149583
+      },
+      {
+        "selector": "thead tr.smart-table-header-row th span.header-content",
+        "confidence": 1,
+        "timestamp": 1746711185399
+      },
+      {
+        "selector": "thead tr.smart-table-header-row th span.header-content",
+        "confidence": 1,
+        "timestamp": 1746712822267
+      }
+    ],
+    "firstName": [
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 0.55,
+        "timestamp": 1746710835953
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746710836006
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746710838023
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746710838058
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711151584
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711151665
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711153689
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711153691
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711187399
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711187475
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711189495
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746711189497
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746712824448
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746712824510
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746712826610
+      },
+      {
+        "selector": "input[name=\"FirstName\"]",
+        "confidence": 1,
+        "timestamp": 1746712826612
+      }
+    ],
+    "lastName": [
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 0.55,
+        "timestamp": 1746710836018
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746710838074
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746711151674
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746711153698
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746711187487
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746711189533
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746712824522
+      },
+      {
+        "selector": "input[name=\"LastName\"]",
+        "confidence": 1,
+        "timestamp": 1746712826619
+      }
+    ],
+    "userName": [
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 0.55,
+        "timestamp": 1746710836023
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746710838088
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746711151680
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746711153703
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746711187491
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746711189537
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746712824529
+      },
+      {
+        "selector": "input[name=\"UserName\"]",
+        "confidence": 1,
+        "timestamp": 1746712826624
+      }
+    ],
+    "password": [
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 0.55,
+        "timestamp": 1746710836031
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746710838092
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746711151697
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746711153709
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746711187494
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746711189542
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746712824535
+      },
+      {
+        "selector": "input[name=\"Password\"]",
+        "confidence": 1,
+        "timestamp": 1746712826635
       }
     ]
   }

@@ -1,73 +1,148 @@
-const { expect } = require('@playwright/test');
 
-class WebTablesPage {
+// UI_Tests/pages/WebTablesPage.js
+const BasePage = require('../framework/pages/BasePage');
+
+class WebTablesPage extends BasePage {
   constructor(page) {
-    this.page = page;
-    this.url  = 'https://www.way2automation.com/angularjs-protractor/webtables/';
+    super(page);
+    this.url = 'https://www.way2automation.com/angularjs-protractor/webtables/';
   }
 
-  // --- Locators ---
-  get addUserButton() {
-    return this.page.getByRole('button', { name: 'Add User' });
-  }
-  get firstName()   { return this.page.locator('input[name="FirstName"]'); }
-  get lastName()    { return this.page.locator('input[name="LastName"]'); }
-  get userName()    { return this.page.locator('input[name="UserName"]'); }
-  get password()    { return this.page.locator('input[name="Password"]'); }
-  get email()       { return this.page.locator('input[name="Email"]'); }
-  get mobilePhone() { return this.page.locator('input[name="Mobilephone"]'); }
-  get saveBtn()     { return this.page.getByRole('button', { name: 'Save' }); }
-  get headers()     { return this.page.locator('thead tr.smart-table-header-row th span.header-content'); }
+  // --- static locators map for healing ---
+  static locators = {
+    addUserButton: [
+      'button.btn-link.pull-right[ng-click="pop()"]', // More specific CSS
+      'button:has-text("Add User")', // Text-based fallback
+      'getByRole-button-Add User', // Role-based fallback
+      'button[type="add"][ng-click="pop()"]' // Specific attribute combination
+    ],
+    firstName: [
+      'input[name="FirstName"]',
+      'input[placeholder="First Name"]',
+      'input[ng-model="FirstName"]'
+    ],
+    lastName: [
+      'input[name="LastName"]',
+      'input[placeholder="Last Name"]',
+      'input[ng-model="LastName"]'
+    ],
+    userName: [
+      'input[name="UserName"]',
+      'input[placeholder="User Name"]',
+      'input[ng-model="UserName"]'
+    ],
+    password: [
+      'input[name="Password"]',
+      'input[placeholder="Password"]',
+      'input[ng-model="Password"]'
+    ],
+    email: [
+      'input[name="Email"]',
+      'input[placeholder="Email"]',
+      'input[ng-model="Email"]'
+    ],
+    mobilePhone: [
+      'input[name="Mobilephone"]',
+      'input[placeholder="Mobile Phone"]',
+      'input[ng-model="Mobilephone"]'
+    ],
+    saveBtn: [
+      'button:has-text("Save")',
+      'button[type="submit"]',
+      'getByRole-button-Save'
+    ],
+    headers: [
+      'thead tr.smart-table-header-row th span.header-content',
+      '.smart-table-header th span'
+    ],
+    companyRadio: [
+      (company) => `input[value="${company}"]`,
+      (company) => `label:has-text("${company}") input`
+    ],
+    roleDropdown: [
+      'select[name="RoleId"]',
+      'select[ng-model="RoleId"]'
+    ]
+  };
 
-  // --- Navigation ---
+   // --- Navigation ---
   async navigate() {
     await this.page.goto(this.url);
-    await this.addUserButton.waitFor({ state: 'visible' });
+    try {
+      const btn = await this.$('addUserButton');
+      await btn.waitFor({ state: 'visible', timeout: 10000 });
+    } catch (error) {
+      console.error('Failed to locate Add User button:', error);
+      throw error;
+    }
   }
 
   // --- Open the Add‑User modal, waiting for any old backdrop to clear ---
   async clickAddUser() {
     await this.page.locator('.modal-backdrop')
       .waitFor({ state: 'detached', timeout: 3000 })
-      .catch(() => {});            // ignore if none
-    await this.addUserButton.click();
-    await this.firstName.waitFor({ state: 'visible' });
+      .catch(() => {});
+    await (await this.$('addUserButton')).click();
+    await (await this.$('firstName')).waitFor({ state: 'visible' });
   }
 
   // --- Fill and save the user form, then wait for modal to close ---
   async addUser(user) {
-    await this.firstName.fill(user.firstName);
-    await this.lastName .fill(user.lastName);
-    await this.userName .fill(user.username);
-    await this.password .fill(user.password);
+    await (await this.$('firstName')).fill(user.firstName);
+    await (await this.$('lastName')).fill(user.lastName);
+    await (await this.$('userName')).fill(user.username);
+    await (await this.$('password')).fill(user.password);
 
-    // check the proper radio by its label text
-    await this.page.getByLabel(user.company).check();
+    // Handle company radio - using dynamic locator resolution
+    const companyLocator = await this.resolveDynamicLocator('companyRadio', user.company);
+    await companyLocator.check();
 
-    // select role from the dropdown
-    await this.page
-      .locator('select[name="RoleId"]')
-      .selectOption({ label: user.role });
+    // Handle role dropdown
+    const roleDropdown = await this.$('roleDropdown');
+    await roleDropdown.selectOption({ label: user.role });
 
-    await this.email      .fill(user.email);
-    await this.mobilePhone.fill(user.mobilePhone);
+    await (await this.$('email')).fill(user.email);
+    await (await this.$('mobilePhone')).fill(user.mobilePhone);
 
-    await this.saveBtn.click();
+    await (await this.$('saveBtn')).click();
 
     // wait for modal (and backdrop) to fully go away
-    await this.firstName.waitFor({ state: 'detached' });
-    await this.addUserButton.waitFor({ state: 'visible' });
+    await (await this.$('firstName')).waitFor({ state: 'detached' });
+    await (await this.$('addUserButton')).waitFor({ state: 'visible' });
   }
 
   // --- Helpers ---
   async getHeaderList() {
-    return this.headers.allTextContents();
+    const headers = await this.$('headers');
+    return headers.allTextContents();
   }
 
   async isUserPresent(username) {
     return (await this.page
       .locator(`table.smart-table td:has-text("${username}")`)
       .count()) > 0;
+  }
+
+  // Helper for dynamic locators (like company radio buttons)
+  async resolveDynamicLocator(elementKey, dynamicValue) {
+    const pageName = this.constructor.name;
+    const candidates = this.constructor.locators[elementKey];
+    
+    if (!candidates) {
+      throw new Error(`No candidates declared for ${pageName}.${elementKey}`);
+    }
+
+    // Resolve dynamic selectors
+    const resolvedCandidates = candidates.map(template => {
+      if (typeof template === 'function') {
+        return template(dynamicValue);
+      }
+      return template;
+    });
+
+    // Use LocatorService to resolve the best option
+    const selector = await LocatorService.resolveDynamic(pageName, elementKey, resolvedCandidates, this.page);
+    return this.page.locator(selector);
   }
 }
 
