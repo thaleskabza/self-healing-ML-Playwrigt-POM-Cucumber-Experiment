@@ -1,0 +1,36 @@
+{
+  "WebTablesPage": {
+    "addUserButton": [
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 0.55,
+        "timestamp": 1746708635707
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746708637548
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 1,
+        "timestamp": 1746708639384
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746708840306
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746708842096
+      },
+      {
+        "selector": "button[ng-click=\"pop()\"]",
+        "confidence": 0.9500000000000001,
+        "timestamp": 1746708844117
+      }
+    ]
+  }
+}
